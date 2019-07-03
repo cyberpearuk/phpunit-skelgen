@@ -15,7 +15,7 @@ class TestGeneratorTest extends TestCase {
      * @param        string $className
      * @dataProvider provider
      */
-    public function testGeneratesTestCodeCorrectly($className) {
+    public function testGeneratesTestCodeCorrectly(string $className) {
         $generatedFile = vfsStream::url('root') . '/' . $className . 'Test.php';
 
         $generator = new TestGenerator(
@@ -33,7 +33,7 @@ class TestGeneratorTest extends TestCase {
         );
     }
 
-    public function provider() {
+    public function provider(): array {
         return array(
             array('Calculator'),
             array('Calculator2')
