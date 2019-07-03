@@ -12,6 +12,6 @@ script:
     # Lint all php files
     - ./vendor/bin/phplint ./ --exclude=vendor
     # Lint all php files
-    - ./vendor/bin/phpcs --standard=PSR2 ./*.php
+    - ./vendor/bin/phpcs --extensions=php --standard=PSR1 src/
     # Run tests
     - phpunit --configuration phpunit.xml --coverage-text
