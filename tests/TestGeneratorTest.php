@@ -1,12 +1,12 @@
 <?php
 namespace SebastianBergmann\PHPUnit\SkeletonGenerator;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use org\bovigo\vfs\vfsStream;
 
-class TestGeneratorTest extends PHPUnit_Framework_TestCase
+class TestGeneratorTest extends TestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         vfsStream::setup();
     }

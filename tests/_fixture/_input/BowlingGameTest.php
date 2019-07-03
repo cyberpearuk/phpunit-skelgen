@@ -1,9 +1,9 @@
 <?php
-class BowlingGameTest extends PHPUnit_Framework_TestCase
+class BowlingGameTest extends PHPUnit\Framework\TestCase
 {
     protected $game;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->game = new BowlingGame;
     }
