@@ -458,7 +458,7 @@ class ClassGenerator extends AbstractGenerator {
                             $tokens[$i + 2] == '&' &&
                             is_array($tokens[$i + 3]) &&
                             $tokens[$i + 3][0] == T_STRING))) {
-                        continue;
+                        break;
                     }
 
                     $currentBlock = T_FUNCTION;
