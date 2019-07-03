@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit 
-    bootstrap="vendor/autoload.php"
-    colors="true">
-    <testsuites>
-        <testsuite name="Main">
-            <file>./tests/ClassGeneratorTest.php</file>
-            <file>./tests/TestGeneratorTest.php</file>
-        </testsuite>
-    </testsuites>
+<phpunit backupGlobals="false"
+         bootstrap="./vendor/autoload.php"
+         strict="true"
+         verbose="true">
+    <testsuite name="PHPUnit Skeleton Generator">
+        <directory suffix="Test.php">./tests</directory>
+        <exclude>./tests/_fixture</exclude>
+    </testsuite>
     <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">src</directory>
-            <exclude>
-                <directory suffix=".php">tests</directory>
-                <directory suffix=".php">src</directory>
-            </exclude>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src</directory>
         </whitelist>
     </filter>
 </phpunit>

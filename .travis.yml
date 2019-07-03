@@ -1,0 +1,17 @@
+# see http://about.travis-ci.org/docs/user/languages/php/ for more hints
+language: php
+
+php:
+  - 7.1
+  - 7.2
+  - 7.3
+
+script:
+    # Install dependencies
+    - composer --no-interaction install
+    # Lint all php files
+    - ./vendor/bin/phplint ./ --exclude=vendor
+    # Lint all php files
+    - ./vendor/bin/phpcs --standard=PSR2 ./*.php
+    # Run tests
+    - phpunit --configuration phpunit.xml --coverage-text
