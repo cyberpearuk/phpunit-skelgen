@@ -40,15 +40,12 @@
  * @since     File available since Release 2.0.0
  */
 
-namespace SebastianBergmann\PHPUnit\SkeletonGenerator\CLI;
+namespace CyberPear\PHPUnitSkelGen\CLI;
 
-use SebastianBergmann\PHPUnit\SkeletonGenerator\AbstractGenerator;
-use SebastianBergmann\PHPUnit\SkeletonGenerator\TestGenerator;
-use Symfony\Component\Console\Command\Command;
+use CyberPear\PHPUnitSkelGen\AbstractGenerator;
+use CyberPear\PHPUnitSkelGen\TestGenerator;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
-use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * @author    Sebastian Bergmann <sebastian@phpunit.de>

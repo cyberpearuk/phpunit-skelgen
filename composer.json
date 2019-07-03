@@ -27,9 +27,9 @@
         "mikey179/vfsstream": "^1.6"
     },
     "autoload": {
-        "classmap": [
-            "src/"
-        ]
+        "psr-4": {
+            "CyberPear\\PHPUnitSkelGen\\": "src/"
+        }
     },
     "bin": [
         "phpunit-skelgen"

@@ -1,5 +1,5 @@
 <?php
-namespace SebastianBergmann\PHPUnit\SkeletonGenerator;
+namespace CyberPear\PHPUnitSkelGen;
 
 use PHPUnit\Framework\TestCase;
 use org\bovigo\vfs\vfsStream;

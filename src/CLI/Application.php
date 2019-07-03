@@ -40,14 +40,12 @@
  * @since     File available since Release 2.0.0
  */
 
-namespace SebastianBergmann\PHPUnit\SkeletonGenerator\CLI;
+namespace CyberPear\PHPUnitSkelGen\CLI;
 
 use SebastianBergmann\Version;
 use Symfony\Component\Console\Application as AbstractApplication;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Console\Output\OutputInterface;
-use Symfony\Component\Console\Input\ArrayInput;
 
 /**
  * TextUI frontend for PHPUnit Skeleton Generator.
