@@ -91,7 +91,7 @@ class GenerateClassCommand extends BaseCommand {
      * @param InputInterface  $input  An InputInterface instance
      * @return AbstractGenerator
      */
-    protected function getGenerator(InputInterface $input): ClassGenerator {
+    protected function getGenerator(InputInterface $input): AbstractGenerator {
         return new ClassGenerator(
                 (string) $input->getArgument('test-class'),
                 (string) $input->getArgument('test-source'),
