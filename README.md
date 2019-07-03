@@ -6,6 +6,8 @@
 This is a fork of the original [`sebastianbergmann/phpunit-skeleton-generator`](https://github.com/sebastianbergmann/phpunit-skeleton-generator)
 which was abondoned at ~v4 of PHPUnit, to provide support for PHPUnit 8 and PHP7.1.
 
+This fork is maintained by [www.cyberpear.co.uk](https://www.cyberpear.co.uk).
+
 ## Installation
 
 ### Composer
