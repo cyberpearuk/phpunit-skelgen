@@ -5,3 +5,5 @@ cache.properties
 composer.phar
 composer.lock
 vendor
+/nbproject/private/
+/.phpunit.result.cache
