@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.com/cyberpearuk/phpunit-skeleton-generator.svg?branch=master)](https://travis-ci.com/cyberpearuk/phpunit-skeleton-generator)
 [![codecov](https://codecov.io/gh/cyberpearuk/phpunit-skelgen/branch/master/graph/badge.svg)](https://codecov.io/gh/cyberpearuk/phpunit-skelgen)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/07434235635b4d25870020d333b3c96a)](https://www.codacy.com/app/jbuncle/phpunit-skelgen?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cyberpearuk/phpunit-skelgen&amp;utm_campaign=Badge_Grade)
+[![Packagist](https://img.shields.io/packagist/v/cyberpearuk/phpunit-skelgen.svg)](https://packagist.org/packages/cyberpearuk/phpunit-skelgen)
 
 `phpunit-skelgen` is a tool that can generate skeleton test classes from production
  code classes and vice versa.
@@ -32,6 +33,14 @@ For a system-wide installation via Composer, you can run:
 Make sure you have `~/.composer/vendor/bin/` in your path.
 
 ## Usage
+
+### CLI
+
+`./vendor/bin/phpunit-skelgen --ansi generate-test <namespace> <src-file> <test-class-name> <tst-file>`
+
+```bash
+./vendor/bin/phpunit-skelgen --ansi generate-test "My\Namespace" "path/to/src/class" "My\Namespace\ClassNameTest" "/path/to/tests/class"
+```
 
 ### Assertion Annotations
 
