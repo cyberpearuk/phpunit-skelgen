@@ -1,5 +1,9 @@
 # PHPUnit 8 Skeleton Generator
 
+[![Build Status](https://travis-ci.com/cyberpearuk/phpunit-skeleton-generator.svg?branch=master)](https://travis-ci.com/cyberpearuk/phpunit-skeleton-generator)
+[![codecov](https://codecov.io/gh/cyberpearuk/phpunit-skelgen/branch/master/graph/badge.svg)](https://codecov.io/gh/cyberpearuk/phpunit-skelgen)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/07434235635b4d25870020d333b3c96a)](https://www.codacy.com/app/jbuncle/phpunit-skelgen?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=cyberpearuk/phpunit-skelgen&amp;utm_campaign=Badge_Grade)
+
 `phpunit-skelgen` is a tool that can generate skeleton test classes from production
  code classes and vice versa.
 
