@@ -14,4 +14,7 @@ script:
     # Lint all php files
     - ./vendor/bin/phpcs --extensions=php --standard=PSR1 src/
     # Run tests
-    - phpunit --configuration phpunit.xml --coverage-text
+    - vendor/bin/phpunit --configuration phpunit.xml --coverage-clover=coverage.xml
+
+after_success:
+    - bash <(curl -s https://codecov.io/bash)

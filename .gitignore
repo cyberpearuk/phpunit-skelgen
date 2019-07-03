@@ -8,3 +8,4 @@ vendor
 /nbproject/private/
 /.phpunit.result.cache
 /.phplint-cache
+/coverage.xml
