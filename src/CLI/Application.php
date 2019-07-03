@@ -1,4 +1,5 @@
 <?php
+
 /**
  * phpunit-skeleton-generator
  *
@@ -56,10 +57,9 @@ use Symfony\Component\Console\Output\OutputInterface;
  * @link      http://github.com/sebastianbergmann/phpunit-skeleton-generator/tree
  * @since     Class available since Release 2.0.0
  */
-class Application extends AbstractApplication
-{
-    public function __construct()
-    {
+class Application extends AbstractApplication {
+
+    public function __construct() {
         $version = new Version('2.0.1', dirname(dirname(__DIR__)));
         parent::__construct('phpunit-skelgen', $version->getVersion());
 
@@ -75,22 +75,22 @@ class Application extends AbstractApplication
      *
      * @return integer 0 if everything went fine, or an error code
      */
-    public function doRun(InputInterface $input, OutputInterface $output)
-    {
+    public function doRun(InputInterface $input, OutputInterface $output) {
         if (!$input->hasParameterOption('--quiet')) {
             $output->write(
-                sprintf(
-                    "phpunit-skelgen %s by Sebastian Bergmann.\n\n",
-                    $this->getVersion()
-                )
+                    sprintf(
+                            "phpunit-skelgen %s by Sebastian Bergmann.\n\n",
+                            $this->getVersion()
+                    )
             );
         }
 
         if ($input->hasParameterOption('--version') ||
-            $input->hasParameterOption('-V')) {
+                $input->hasParameterOption('-V')) {
             exit;
         }
 
         parent::doRun($input, $output);
     }
+
 }

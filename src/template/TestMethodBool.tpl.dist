@@ -4,8 +4,7 @@
      *
      * @covers {className}::{origMethodName}
      */
-    public function test{methodName}()
-    {
+    public function test{methodName}() {
         $this->assert{assertion}(
             $this->object->{origMethodName}({arguments})
         );
