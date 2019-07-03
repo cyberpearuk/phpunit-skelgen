@@ -61,7 +61,7 @@ abstract class BaseCommand extends Command {
     /**
      * Configures the current command.
      */
-    protected function configure() {
+    protected function configure(): void {
         $this->addOption(
                 'bootstrap',
                 null,
@@ -78,7 +78,7 @@ abstract class BaseCommand extends Command {
      *
      * @return null|integer null or 0 if everything went fine, or an error code
      */
-    protected function execute(InputInterface $input, OutputInterface $output) {
+    protected function execute(InputInterface $input, OutputInterface $output): void {
         if ($input->getOption('bootstrap') && file_exists($input->getOption('bootstrap'))) {
             include $input->getOption('bootstrap');
         }
@@ -99,5 +99,5 @@ abstract class BaseCommand extends Command {
      * @param InputInterface  $input  An InputInterface instance
      * @return AbstractGenerator
      */
-    abstract protected function getGenerator(InputInterface $input);
+    abstract protected function getGenerator(InputInterface $input): AbstractGenerator;
 }

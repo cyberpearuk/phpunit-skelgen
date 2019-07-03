@@ -60,7 +60,7 @@ class GenerateTestCommand extends BaseCommand {
     /**
      * Configures the current command.
      */
-    protected function configure() {
+    protected function configure(): void {
         $this->setName('generate-test')
                 ->setDescription('Generate a test class based on a class')
                 ->addArgument(
@@ -91,7 +91,7 @@ class GenerateTestCommand extends BaseCommand {
      * @param InputInterface  $input  An InputInterface instance
      * @return AbstractGenerator
      */
-    protected function getGenerator(InputInterface $input) {
+    protected function getGenerator(InputInterface $input): AbstractGenerator {
         return new TestGenerator(
                 (string) $input->getArgument('class'),
                 (string) $input->getArgument('class-source'),

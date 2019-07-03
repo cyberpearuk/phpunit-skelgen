@@ -1,4 +1,5 @@
 <?php
+
 /**
  * phpunit-skeleton-generator
  *
@@ -52,8 +53,8 @@ namespace CyberPear\PHPUnitSkelGen;
  * @link       http://www.phpunit.de/
  * @since      Class available since Release 1.0.0
  */
-abstract class AbstractGenerator
-{
+abstract class AbstractGenerator {
+
     /**
      * @var array
      */
@@ -82,42 +83,44 @@ abstract class AbstractGenerator
      * @param string $outClassName
      * @param string $outSourceFile
      */
-    public function __construct($inClassName, $inSourceFile = '', $outClassName = '', $outSourceFile = '')
-    {
+    public function __construct(
+            string $inClassName,
+            string $inSourceFile = '',
+            string $outClassName = '',
+            string $outSourceFile = ''
+    ) {
         $this->inClassName = $this->parseFullyQualifiedClassName(
-            $inClassName
+                $inClassName
         );
 
         $this->outClassName = $this->parseFullyQualifiedClassName(
-            $outClassName
+                $outClassName
         );
 
         $this->inSourceFile = str_replace(
-            $this->inClassName['fullyQualifiedClassName'],
-            $this->inClassName['className'],
-            $inSourceFile
+                $this->inClassName['fullyQualifiedClassName'],
+                $this->inClassName['className'],
+                $inSourceFile
         );
 
         $this->outSourceFile = str_replace(
-            $this->outClassName['fullyQualifiedClassName'],
-            $this->outClassName['className'],
-            $outSourceFile
+                $this->outClassName['fullyQualifiedClassName'],
+                $this->outClassName['className'],
+                $outSourceFile
         );
     }
 
     /**
      * @return string
      */
-    public function getOutClassName()
-    {
+    public function getOutClassName(): string {
         return $this->outClassName['fullyQualifiedClassName'];
     }
 
     /**
      * @return string
      */
-    public function getOutSourceFile()
-    {
+    public function getOutSourceFile(): string {
         return $this->outSourceFile;
     }
 
@@ -126,8 +129,7 @@ abstract class AbstractGenerator
      *
      * @param string $file
      */
-    public function write($file = '')
-    {
+    public function write(string $file = ''): void {
         if ($file == '') {
             $file = $this->outSourceFile;
         }
@@ -139,17 +141,16 @@ abstract class AbstractGenerator
      * @param  string $className
      * @return array
      */
-    protected function parseFullyQualifiedClassName($className)
-    {
+    protected function parseFullyQualifiedClassName(string $className): array {
         $result = array(
-            'namespace'               => '',
-            'className'               => $className,
+            'namespace' => '',
+            'className' => $className,
             'fullyQualifiedClassName' => $className
         );
 
         if (strpos($className, '\\') !== false) {
-            $tmp                 = explode('\\', $className);
-            $result['className'] = $tmp[count($tmp)-1];
+            $tmp = explode('\\', $className);
+            $result['className'] = $tmp[count($tmp) - 1];
             $result['namespace'] = $this->arrayToName($tmp);
         }
 
@@ -160,8 +161,7 @@ abstract class AbstractGenerator
      * @param  array $parts
      * @return string
      */
-    protected function arrayToName(array $parts)
-    {
+    protected function arrayToName(array $parts): string {
         $result = '';
 
         if (count($parts) > 1) {
@@ -176,5 +176,5 @@ abstract class AbstractGenerator
     /**
      * @return string
      */
-    abstract public function generate();
+    abstract public function generate(): string;
 }
