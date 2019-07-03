@@ -25,4 +25,5 @@ class {testClassName} extends {namespaceSeparator}PHPUnit\Framework\TestCase {
     protected function tearDown(): void {
         
     }
-{methods}}
+{methods}
+}

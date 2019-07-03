@@ -73,4 +73,5 @@ class Calculator2Test extends PHPUnit\Framework\TestCase {
                 $this->object->add(1, 1)
         );
     }
+
 }
