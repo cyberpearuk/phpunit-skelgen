@@ -1,5 +1,5 @@
 {
-    "name": "phpunit/phpunit-skeleton-generator",
+    "name": "cyberpearuk/phpunit-skelgen",
     "description": "Tool that can generate skeleton test classes from production code classes and vice versa",
     "keywords": ["phpunit", "xunit", "testing", "skeleton"],
     "homepage": "https://github.com/sebastianbergmann/phpunit-skeleton-generator",
@@ -16,9 +16,6 @@
             "role": "Fork Maintainer"
         }
     ],
-    "support": {
-        "issues": "https://github.com/sebastianbergmann/phpunit-skeleton-generator/issues"
-    },
     "require": {
         "php": ">=7.1",
         "sebastian/version": "^2.0",
