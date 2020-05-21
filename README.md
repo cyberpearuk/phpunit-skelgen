@@ -59,3 +59,8 @@ methods doc comment. For example the below will generate 4 test cases:
         return $a + $b;
     }
 ```
+
+## Maintainer
+
+This repository is maintained by [Black Pear Digital](https://www.blackpeardigital.co.uk).
+
